@@ -475,4 +475,3 @@ The code used to create this interactive map can be found in my GitHub repositor
 
 [View Map Code on GitHub](https://github.com/kierramiller/kierramiller.github.io)
 
-![](wave.png){width=50%}
