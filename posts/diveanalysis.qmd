@@ -1,0 +1,47 @@
+---
+title: "Dive Data Exploration"
+author: "Kierra Miller"
+date: "2026-06-01"
+categories:
+  - Data Analysis
+  - Scuba Diving
+format: html
+---
+
+# Dive Depth Data Visualization 
+
+```{r}
+# create data set of dive depths 
+depths <- c(
+38,40,44,15,40,40,
+50,40,44,35,32,32,60
+)
+
+summary(depths)
+
+# create visualization 
+library(ggplot2)
+
+dives <- data.frame(
+  Dive = 1:length(depths),
+  Depth = depths
+)
+# plot x and y axes, set labels and titles
+ggplot(dives,
+       aes(x = Dive,
+           y = Depth)) +
+  geom_col() +
+  labs(
+    title = "Depth of Recorded Dives",
+    x = "Dive Number",
+    y = "Depth (ft)"
+  ) +
+  theme_minimal()
+
+```
+
+# Results
+
+The average dive depth was approximately 39 feet. Most dives ranged between 32 and 50 feet, while the deepest dive reached 60 feet.
+
+This exercise demonstrates how ecological and recreational field data can be explored using simple visualization techniques in R.

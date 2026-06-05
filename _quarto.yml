@@ -12,7 +12,6 @@ website:
       - about.qmd
       - diving.qmd
       - resume.qmd 
-      - research.qmd
       - projects.qmd
       - writingsamples.qmd
 

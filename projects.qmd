@@ -5,8 +5,9 @@ listing:
   type: default
 ---
 
-# Research Overview
+This page contains ongoing research projects, and an example visualization showcasing how ecological relationships can be modeled with data analysis and interpretation, this allows us to incorporate statistical analysis into environmental solutions. 
 
-I am interested in marine ecosystems, ecological change, and environmental data analysis.
 
-This page contains project write-ups, research summaries, and data-analysis posts completed during my undergraduate studies.
+
+
+
