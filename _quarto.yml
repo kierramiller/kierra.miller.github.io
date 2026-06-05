@@ -4,12 +4,16 @@ project:
   
 
 website:
-  title: "kierra.miller.github.io"
+  title: "| Kierra Miller |"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - diving.qmd
+      - resume.qmd 
+      - research.qmd
+      - projects.qmd
 
 format:
   html:

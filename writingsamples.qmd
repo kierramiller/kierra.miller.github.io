@@ -1,0 +1,14 @@
+---
+title: "Writing Samples"
+format: html 
+---
+
+## Research Paper Sample: Marine Mammal Captivity 
+
+<iframe src="files/researchproject.pdf" width="100%" height="600px"></iframe>
+
+
+
+## Research Paper Example: Wildfire Case Study
+
+<iframe src="files/wildfirecasestudy.pdf" width="100%" height="600px"></iframe>
