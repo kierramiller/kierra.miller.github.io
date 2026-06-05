@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "writingsamples.html#research-paper-example-wildfire-case-study",
+    "href": "writingsamples.html#research-paper-example-wildfire-case-study",
+    "title": "Writing Samples",
+    "section": "Research Paper Example: Wildfire Case Study",
+    "text": "Research Paper Example: Wildfire Case Study"
+  },
+  {
+    "objectID": "posts/research.html",
+    "href": "posts/research.html",
+    "title": "Research",
+    "section": "",
+    "text": "I am interested in marine ecosystems, ecological change, and environmental data analysis.\n\n\n\n\n\n\n\nUrchin Abundance Research Experiment\n\n\nSBC LTER Experiment\n\n\nField-based ecological monitoring of sea urchin populations along the Santa Barbara coastline.\n\n\n\n\nMore details\n\n\nThis project is part of the Santa Barbara Coastal Long Term Ecological Research (SBC LTER) program. I work alongside team members to conduct biweekly experiments at multiple coastal sites. Data include larval settlement rates, dietary composition effects on growth and gonad development, fertilization success, and forage rate across long-term time series datasets.\n\n\n View Project PDF \n\n\n\n\n\n\n\nCoast Live Oak Gall Growth Experiment\n\n\nEcosystem Change Project\n\n\nA 9-week field experiment analyzing gall formation and ecosystem response in Coast Live Oak trees.\n\n\n\n\nMore details\n\n\nThis class-based research project investigated how abiotic factors influence gall formation and grass growth. We tested environmental drivers of plant–insect interactions and quantified variation across sites in Isla Vista, CA using observational and experimental data collection.\n\n\n View Project PDF"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "NoteBackground\n\n\n\nHi there! I am an Environmental Studies student at UCSB from Coloma, CA. I am a first-generation college student working toward a B.S. degree, with plans to pursue a Master’s degree.\n\n\n\n\n\n\n\n\n\n\n\nImportantInterests\n\n\n\n\nEcology\n\nClimate change\n\nData science\n\n\n\n\n\n\n\n\n\n\nTipFavorites\n\n\n\n\n🐋 Animal: Orca\n\n🌍 Place: Big Sur, CA / Iceland\n\n🎯 Dream Job: Whale Researcher / Marine Biologist"
+  },
+  {
+    "objectID": "about.html#overview",
+    "href": "about.html#overview",
+    "title": "About Me",
+    "section": "",
+    "text": "ImportantInterests\n\n\n\n\nEcology\n\nClimate change\n\nData science\n\n\n\n\n\n\n\n\n\n\nTipFavorites\n\n\n\n\n🐋 Animal: Orca\n\n🌍 Place: Big Sur, CA / Iceland\n\n🎯 Dream Job: Whale Researcher / Marine Biologist"
+  },
+  {
+    "objectID": "diving.html",
+    "href": "diving.html",
+    "title": "Scuba Diving",
+    "section": "",
+    "text": "NoteDiving Certifications\n\n\n\n\nNAUI Open Water Scuba Diver\nNAUI Open Water Scuba Diver\nNAUI Rescue Diver\nNAUI Nitrox Diver\nAAUS Lead Diver\nAAUS Scientific Diving\nDiver’s Alert Network First Aid, CPR/O2"
+  },
+  {
+    "objectID": "diving.html#map-code",
+    "href": "diving.html#map-code",
+    "title": "Scuba Diving",
+    "section": "Map Code",
+    "text": "Map Code\nThe code used to create this interactive map can be found in my GitHub repository:\nView Map Code on GitHub"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "I am an Environmental Studies student focused on marine and forest ecology, I plan on continuing my studies in Coastal Science and and Ecology. I spend my time enjoying many hobbies including painting, backpacking, surfing, and scuba diving.\nI am passionate about understanding ocean ecosystems and working in an outdoor environment."
+  },
+  {
+    "objectID": "index.html#hi-im-kierra",
+    "href": "index.html#hi-im-kierra",
+    "title": "Home",
+    "section": "",
+    "text": "I am an Environmental Studies student focused on marine and forest ecology, I plan on continuing my studies in Coastal Science and and Ecology. I spend my time enjoying many hobbies including painting, backpacking, surfing, and scuba diving.\nI am passionate about understanding ocean ecosystems and working in an outdoor environment."
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Home",
+    "section": "About Me",
+    "text": "About Me\n\nMarine ecology focus\n\nIntermediate scuba diver\n\nInterested in Kelp Forest Ecology\nExperience in Data Visualization and Analysis"
+  },
+  {
+    "objectID": "posts/diveanalysis.html",
+    "href": "posts/diveanalysis.html",
+    "title": "Dive Data Exploration",
+    "section": "",
+    "text": "Dive Depth Data Visualization\n\n# create data set of dive depths \ndepths &lt;- c(\n38,40,44,15,40,40,\n50,40,44,35,32,32,60\n)\n\nsummary(depths)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  15.00   35.00   40.00   39.23   44.00   60.00 \n\n# create visualization \nlibrary(ggplot2)\n\ndives &lt;- data.frame(\n  Dive = 1:length(depths),\n  Depth = depths\n)\n# plot x and y axes, set labels and titles\nggplot(dives,\n       aes(x = Dive,\n           y = Depth)) +\n  geom_col() +\n  labs(\n    title = \"Depth of Recorded Dives\",\n    x = \"Dive Number\",\n    y = \"Depth (ft)\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\nResults\nThe average dive depth was approximately 39 feet. Most dives ranged between 32 and 50 feet, while the deepest dive reached 60 feet.\nThis exercise demonstrates how ecological and recreational field data can be explored using simple visualization techniques in R."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "This page contains ongoing research projects, and an example visualization showcasing how ecological relationships can be modeled with data analysis and interpretation, this allows us to incorporate statistical analysis into environmental solutions.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDive Data Exploration\n\n\n\n\n\n\n\n\nJun 1, 2026\n\n\nKierra Miller\n\n\n\n\n\n\n\n\n\n\n\n\nResearch\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  }
+]
