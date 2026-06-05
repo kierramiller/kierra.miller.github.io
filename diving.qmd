@@ -31,6 +31,8 @@ marine biodiversity.
 
 # Dive Site Interactive Map
 
+Below is an interactive map showcasing the different dive site locations I have had the opportunity to explore. 
+
 <div id="map" style="height: 600px;"></div>
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
