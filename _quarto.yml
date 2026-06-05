@@ -14,6 +14,16 @@ website:
       - resume.qmd 
       - projects.qmd
       - writingsamples.qmd
+      
+    right:
+      - icon: envelope
+        href: "https://mail.google.com/mail/?view=cm&fs=1&to=kierramiller2005@gmail.com"
+
+      - icon: github
+        href: "https://github.com/kierramiller"
+
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/kierra-miller-817107336/"
 
 format:
   html:
