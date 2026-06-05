@@ -1,7 +1,50 @@
 ---
-title: "kierra.miller.github.io"
+title: "Home"
 ---
 
-This is a Quarto website.
+:::: {.columns}
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+::: {.column width="60%"}
+
+## Hi, I'm Kierra
+
+I am an Environmental Studies student focused on marine and forest ecology, I plan on continuing my studies in Coastal Science and and Ecology. I spend my time enjoying many hobbies including painting, backpacking, surfing, and scuba diving.
+
+I am passionate about understanding ocean ecosystems and working in an outdoor 
+environment. 
+
+:::
+
+::: {.column width="40%"}
+
+![](IMG_6037.JPG){.circle-img width=260px}
+
+:::
+
+::::
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](Kierra-45.JPG){.square-img}
+
+:::
+
+::: {.column width="50%"}
+
+<div class="text-box">
+
+## About Me
+
+- Marine ecology focus  
+- Intermediate scuba diver  
+- Interested in Kelp Forest Ecology
+- Experience in Data Visualization and Analysis 
+
+</div>
+
+:::
+
+::::

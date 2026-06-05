@@ -1,0 +1,474 @@
+---
+title: "Scuba Diving"
+format: html
+---
+::: {.callout-note}
+# Diving Certifications 
+- NAUI Open Water Scuba Diver 
+- NAUI Open Water Scuba Diver
+- NAUI Rescue Diver 
+- NAUI Nitrox Diver 
+- AAUS Lead Diver 
+- AAUS Scientific Diving 
+- Diver's Alert Network First Aid, CPR/O2 
+:::
+
+::: {.callout-note}
+# About My Diving Experience
+I have completed over 20 dives along the Santa Barbara coastline including
+recreational, training, and scientific diving focusing on kelp forest ecosystems and
+marine biodiversity.
+:::
+# Scuba Diving Photography 
+
+![](fish.jpeg){width=60% height=60%}
+
+*Garibaldi Fish at Refugio State Beach, March 2026* 
+
+![](scuba.jpg){width=50% height=60%}
+*Anacapa Island Kelp Forest, November 2025* 
+
+
+# Dive Site Interactive Map
+
+<div id="map" style="height: 600px;"></div>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Load Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<!-- Load Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  // ============================
+  // CREATE MAP
+  // ============================
+
+  // Center map on Santa Barbara Channel
+  var map = L.map('map').setView([34.3, -119.7], 9);
+
+  // Add OpenStreetMap basemap
+  L.tileLayer(
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {
+      attribution: '© OpenStreetMap'
+    }
+  ).addTo(map);
+
+  // ============================
+  // ASSIGN COLORS TO DIVE TYPES
+  // ============================
+
+  function getColor(type) {
+
+    if (type.includes("OW Training")) {
+      return "#1f78b4"; // Blue
+    }
+
+    if (type.includes("Recreational")) {
+      return "#33a02c"; // Green
+    }
+
+    if (type.includes("AAUS")) {
+      return "#e31a1c"; // Red
+    }
+
+    if (type.includes("Pool")) {
+      return "#6a3d9a"; // Purple
+    }
+
+    if (type.includes("Beach")) {
+      return "#ff7f00"; // Orange
+    }
+
+    return "#666666"; // Gray fallback
+  }
+
+  // ============================
+  // DIVE DATA
+  // ============================
+
+  var dives = [
+
+    // ---------- OPEN WATER TRAINING ----------
+
+    {
+      site: "Goldfish Bowl",
+      lat: 34.01431684246292, 
+      lon: -119.43691633538376,
+      depth: 38,
+      time: 30,
+      type: "OW Training",
+      notes: "Slightly cold"
+    },
+
+    {
+      site: "Amphitheater",
+      lat: 34.0167804681726, 
+      lon: -119.43145562491432, 
+      depth: 40,
+      time: 34,
+      type: "OW Training",
+      notes: "Need better buoyancy control"
+    },
+
+    {
+      site: "Scorpion Rock",
+      lat: 34.0478488652378, 
+      lon: -119.54710823355087,
+      depth: 44,
+      time: 28,
+      type: "OW Training",
+      notes: "Good conditions"
+    },
+
+    // ---------- BEACH DIVE ----------
+
+    {
+      site: "Leadbetter Beach",
+      lat: 34.402477854459015,
+      lon: -119.6985202814177,
+      depth: 15,
+      time: 20,
+      type: "Beach Dive",
+      notes: "Very turbulent, low visibility"
+    },
+
+    // ---------- RECREATIONAL DIVES ----------
+
+    {
+      site: "Cat Rock",
+      lat: 34.00516462453085,
+      lon: -119.42375340996594,
+      depth: 40,
+      time: 36,
+      type: "Recreational",
+      notes: "Need more navigation practice"
+    },
+
+    {
+      site: "Harbor Cove",
+      lat: 34.028592673822395, 
+      lon: -119.68657460814796,
+      depth: 40,
+      time: 50,
+      type: "Recreational",
+      notes: "Felt comfortable"
+    },
+
+    {
+      site: "Underwater Island",
+      lat: 34.0125, 
+      lon: -119.3508,
+      depth: 50,
+      time: 45,
+      type: "Recreational",
+      notes: "Strong current toward end"
+    },
+
+    {
+      site: "Big Rock",
+      lat: 34.03142,
+      lon: -119.34442,
+      depth: 40,
+      time: 37,
+      type: "Recreational",
+      notes: "Heavy current"
+    },
+
+    {
+      site: "Goldfish Bowl (Dive 2)",
+      lat: 34.01431684246292, 
+      lon: -119.43691633538376,
+      depth: 44,
+      time: 50,
+      type: "Recreational",
+      notes: "Current, decent visibility"
+    },
+
+    {
+      site: "Goldfish Bowl (Dive 3)",
+      lat: 34.01431684246292, 
+      lon: -119.43691633538376,
+      depth: 35,
+      time: 40,
+      type: "Recreational",
+      notes: "Current, decent visibility"
+    },
+
+    {
+      site: "Lips (Dive 1)",
+      lat: 34.04932664801832,
+      lon: -119.55555464681474, 
+      depth: 32,
+      time: 38,
+      type: "Recreational",
+      notes: "Good visibility"
+    },
+
+    {
+      site: "Lips (Dive 2)",
+      lat: 34.04932664801832,
+      lon: -119.55555464681474, 
+      depth: 32,
+      time: 32,
+      type: "Recreational",
+      notes: "Low current"
+    },
+
+    {
+      site: "Fry Harbor",
+      lat: 34.032,
+      lon: -119.453,
+      depth: 60,
+      time: 20,
+      type: "Recreational",
+      notes: "Very turbulent, low visibility"
+    },
+
+    // ---------- AAUS TRAINING ----------
+
+    {
+      site: "Chalk Cove",
+      lat: 33.44451358821106, 
+      lon: -118.48862113991959,
+      depth: 25,
+      time: 53,
+      type: "AAUS Training",
+      notes: "Fish survey practice"
+    },
+
+    {
+      site: "Chalk Cove Rescue Drill",
+      lat: 33.44451358821106, 
+      lon: -118.48862113991959,
+      depth: 10,
+      time: 10,
+      type: "AAUS Training",
+      notes: "Rescue drill"
+    },
+
+    {
+      site: "USC Dock Night Dive",
+      lat: 33.44507752614589, 
+      lon: -118.48407325627157, 
+      depth: 28,
+      time: 37,
+      type: "AAUS Training",
+      notes: "Night dive"
+    },
+
+    {
+      site: "USC Dock Training",
+      lat: 33.44507752614589, 
+      lon: -118.48407325627157, 
+      depth: 30,
+      time: 25,
+      type: "AAUS Training",
+      notes: "Scientific diving training"
+    },
+
+    // ---------- CAMPUS POINT ----------
+
+    {
+      site: "Campus Point Beach",
+      lat: 34.407689156588674,   
+      lon: -119.84418304713593, 
+      depth: 20,
+      time: 10,
+      type: "AAUS Training",
+      notes: "Kelp forest dive"
+    },
+
+    {
+      site: "Campus Point Beach",
+      lat: 34.407689156588674,   
+      lon: -119.84418304713593, 
+      depth: 25,
+      time: 30,
+      type: "AAUS Training",
+      notes: "Scientific diving"
+    },
+
+    {
+      site: "Campus Point",
+      lat: 34.407689156588674,   
+      lon: -119.84418304713593, 
+      depth: 24,
+      time: 24,
+      type: "AAUS Training",
+      notes: "Training dive"
+    },
+
+    {
+      site: "Campus Point Short Dive",
+      lat: 34.407689156588674,   
+      lon: -119.84418304713593, 
+      depth: 23,
+      time: 7,
+      type: "AAUS Training",
+      notes: "Weight check dive"
+    },
+
+    // ---------- REC CENTER POOL DIVES ----------
+
+    {
+      site: "Rec Center Pool Dive #1",
+      lat: 34.41812416371008, 
+      lon: -119.84995265761916, 
+      depth: 17,
+      time: 40,
+      type: "Pool Dive",
+      notes: "Scientific diving pool session"
+    },
+
+    {
+      site: "Rec Center Pool Dive #2",
+      lat: 34.41812416371008, 
+      lon: -119.84995265761916, 
+      depth: 17,
+      time: 40,
+      type: "Pool Dive",
+      notes: "Scientific diving pool session"
+    },
+
+    {
+      site: "Rec Center Pool Dive #3",
+      lat: 34.41812416371008, 
+      lon: -119.84995265761916, 
+      depth: 17,
+      time: 40,
+      type: "Pool Dive",
+      notes: "Scientific diving pool session"
+    },
+
+    {
+      site: "Rec Center Pool Dive #4",
+      lat: 34.41812416371008, 
+      lon: -119.84995265761916, 
+      depth: 17,
+      time: 40,
+      type: "Pool Dive",
+      notes: "Scientific diving pool session"
+    }
+
+  ];
+// ============================
+// FISH ICONS COLORED BY DIVE TYPE
+// ============================
+
+function getIcon(type) {
+
+  let color = "#666666";
+  let symbol = "fa-fish";
+
+  if (type.includes("AAUS")) {
+    color = "#e31a1c";      // red
+    symbol = "fa-microscope";
+  }
+
+  else if (type.includes("Recreational")) {
+    color = "#33a02c";      // green
+    symbol = "fa-fish";
+  }
+
+  else if (type.includes("OW Training")) {
+    color = "#1f78b4";      // blue
+    symbol = "fa-life-ring";
+  }
+
+  else if (type.includes("Beach")) {
+    color = "#ff7f00";      // orange
+    symbol = "fa-water";
+  }
+
+  else if (type.includes("Pool")) {
+    color = "#6a3d9a";      // purple
+    symbol = "fa-person-swimming";
+  }
+
+  return L.divIcon({
+    html: `
+      <div style="
+        font-size:28px;
+        color:${color};
+        text-align:center;
+        line-height:28px;
+      ">
+        <i class="fas ${symbol}"></i>
+      </div>
+    `,
+    className: "",
+    iconSize: [30,30],
+    iconAnchor: [15,15]
+  });
+
+}
+// ============================
+// ADD MARKERS
+// ============================
+
+dives.forEach(function(dive) {
+
+  var marker = L.marker(
+    [dive.lat, dive.lon],
+    {
+      icon: getIcon(dive.type)
+    }
+  ).addTo(map);
+
+  marker.bindPopup(
+    "<b>" + dive.site + "</b><br>" +
+    "<b>Dive Type:</b> " + dive.type + "<br>" +
+    "<b>Depth:</b> " + dive.depth + " ft<br>" +
+    "<b>Bottom Time:</b> " + dive.time + " min<br>" +
+    "<b>Notes:</b> " + dive.notes
+  );
+
+});
+
+// ============================
+// MAP LEGEND
+// ============================
+
+var legend = L.control({
+  position: 'bottomright'
+});
+
+legend.onAdd = function () {
+
+  var div = L.DomUtil.create('div', 'info legend');
+
+  div.style.backgroundColor = "white";
+  div.style.padding = "10px";
+  div.style.border = "2px solid black";
+  div.style.borderRadius = "5px";
+  div.style.lineHeight = "1.6em";
+
+ div.innerHTML =
+  "<b>Dive Type</b><br>" +
+  "<span style='color:#e31a1c'><i class='fas fa-microscope'></i></span> AAUS Training<br>" +
+  "<span style='color:#33a02c'><i class='fas fa-fish'></i></span> Recreational<br>" +
+  "<span style='color:#1f78b4'><i class='fas fa-life-ring'></i></span> OW Training<br>" +
+  "<span style='color:#ff7f00'><i class='fas fa-water'></i></span> Beach Dive<br>" +
+  "<span style='color:#6a3d9a'><i class='fas fa-person-swimming'></i></span> Pool Dive";
+
+  return div;   // IMPORTANT FIX
+};
+
+legend.addTo(map);
+
+});   // closes document.addEventListener
+
+</script>
+
+## Map Code
+
+The code used to create this interactive map can be found in my GitHub repository:
+
+[View Map Code on GitHub](https://github.com/kierramiller/kierramiller.github.io)
